@@ -8,24 +8,59 @@ public class Basics {
     public static void startAll() {
         Basics.sayHelloWorld();
 
-        Basics.secondQuestion.start();
+        Basics.SecondQuestion.start();
 
-        Basics.thirdQuestion.start();
+        Basics.ThirdQuestion.start();
 
-        Basics.forthQuestion.start();
+        Basics.ForthQuestion.start();
 
-        Basics.fifthQuestion.start();
+        Basics.FifthQuestion.start();
 
-        Basics.sixthQuestion.start();
+        Basics.SixthQuestion.start();
 
-        Basics.seventhQuestion.start();
+        Basics.SeventhQuestion.start();
+    }
+
+    public static void selectQuestion() {
+        Scanner in = new Scanner(System.in);
+        int number;
+        do {
+            System.out.print("Введите номер задания (или 0 для выхода): ");
+            number = in.nextInt();
+
+            switch (number) {
+                case 1:
+                    sayHelloWorld();
+                    break;
+                case 2:
+                    SecondQuestion.start();;
+                    break;
+                case 3:
+                    ThirdQuestion.start();
+                    break;
+                case 4:
+                    ForthQuestion.start();
+                    break;
+                case 5:
+                    FifthQuestion.start();
+                    break;
+                case 6:
+                    SixthQuestion.start();
+                    break;
+                case 7:
+                    SeventhQuestion.start();
+                    break;
+
+            }
+        } while (number != 0);
+
     }
 
     public static void sayHelloWorld() {
         System.out.println("Hello, World!");
     }
 
-    public static class secondQuestion {
+    public static class SecondQuestion {
 
         public static void start() {
             System.out.println("Задача с вещественными числами\nВведите вещественные значения трёх переменных");
@@ -68,7 +103,7 @@ public class Basics {
         }
     }
 
-    public static class thirdQuestion {
+    public static class ThirdQuestion {
         public static void start() {
             System.out.println("Задача с целыми числами\nВведите целые значения трёх переменных");
 
@@ -108,7 +143,7 @@ public class Basics {
         }
     }
 
-    public static class forthQuestion {
+    public static class ForthQuestion {
 
         public static void start() {
             System.out.println("Задача с вещественными значениями коэффициентов квадратного уравнения\nВведите вещественные значения трёх переменных");
@@ -152,7 +187,7 @@ public class Basics {
         }
     }
 
-    public static class fifthQuestion {
+    public static class FifthQuestion {
 
         public static void start() {
             System.out.println("Табулирование функции sin(x)\nВведите границы табулирования");
@@ -183,7 +218,7 @@ public class Basics {
         }
     }
 
-    public static class sixthQuestion {
+    public static class SixthQuestion {
 
         public static void start() {
             Scanner s = new Scanner(System.in);
@@ -231,7 +266,7 @@ public class Basics {
         }
     }
 
-    public static class seventhQuestion {
+    public static class SeventhQuestion {
 
         public static void start() {
             Scanner s = new Scanner(System.in);
